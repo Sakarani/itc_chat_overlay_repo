@@ -253,7 +253,7 @@
         var url = e.data.url;
 
         if (e.data.action === "nav_foods") {
-            loadiFrame('https://itcstore.in/collections/foods/india-products');
+            loadiFrame('https://www.amazon.com/s?k=foods&crid=30XUUKTHQ8WAH&sprefix=food%2Caps%2C392&ref=nb_sb_noss_1');
             console.log("nav_checking")
         }
 		else if (e.data.action === "nav_personalCare") {
@@ -279,7 +279,7 @@
          */
 
         var receiverElem = document.getElementById('receiver').contentWindow;
-        receiverElem.postMessage(data, "https://us10.dev.amelia.com/Amelia/ui/mortgage/chat?domainCode=wealthmanagement");
+        receiverElem.postMessage(data, "https://itc.dev.amelia.com/Amelia/ui/itc/34/chat?domainCode=itc");
     }
 
     window.addEventListener('message', receiveMessage);
