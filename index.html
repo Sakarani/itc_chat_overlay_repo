@@ -253,7 +253,7 @@
         var url = e.data.url;
 
         if (e.data.action === "nav_foods") {
-            loadiFrame('https://itcstore.in/collections/foods/india-products');
+            loadiFrame(url);
             console.log("nav_checking")
         }
 		
@@ -265,7 +265,10 @@
          * @param {Object} data - data to be sent to url provided of child frame
          * @returns - no return
          */
-
+	if (data === "Added In To Cart") {
+            receiverElem.postMessage(data, "https://itc.dev.amelia.com/Amelia/ui/itc/34/chat?domainCode=itc");
+            console.log("send_message")
+        }
         var receiverElem = document.getElementById('receiver').contentWindow;
         receiverElem.postMessage(data, "https://itc.dev.amelia.com/Amelia/ui/itc/34/chat?domainCode=itc");
     }
